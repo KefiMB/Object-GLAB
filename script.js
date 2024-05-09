@@ -23,4 +23,21 @@ for (let i = 0; i < adventurer.inventory.length; i++) {
       };
       console.log(adventurer);
       adventurer.roll();
+
+      // Part 2
+
+      class Character {
+        constructor(name) {
+          this.name = name;
+          this.health = 100;
+          this.inventory = [];
+        }
+      
+        roll() {
+          const rollValue = Math.floor(Math.random() * 20) + 1;
+          return rollValue;
+        }
+      }const robin = new Character('Robin');
+      const rollResult = robin.roll();
+      console.log(`Robin rolled: ${rollResult}`);
       
