@@ -41,3 +41,22 @@ for (let i = 0; i < adventurer.inventory.length; i++) {
       const rollResult = robin.roll();
       console.log(`Robin rolled: ${rollResult}`);
       
+      // Part 3
+
+      class Adventurer extends Character {
+        constructor(name, role) {
+          super(name);
+          this.role = role;
+          this.inventory.push("bedroll", "50 gold coins");
+          this.experience = 0; 
+          this.level = 1; 
+        }
+      
+        scout() {
+          console.log(`${this.name} is scouting ahead...`);
+          const rollResult = super.roll();
+          console.log(`Scout roll: ${rollResult}`);
+        }
+      
+        
+      }
