@@ -7,20 +7,20 @@ const adventurer = {
     companion: {
         name: "Leo",
         type: "Cat"
-    }
-}
-const leo = {
-    name: "Leo",
-    type: "Cat",
-    friend: adventurer,
-    companion: {
-      name: "Frank",
-      type: "Flea",
-      belongings: ["small hat", "sunglasses"]
-    }
-}
-    for (let i = 0; i < adventurer.inventory.length; i++) {
+    },
+roll(mod = 0) {
+    const result = Math.floor(Math.random() * 20) + 1 + mod;
+    console.log(`${this.name} rolled a ${result}.`);
+  }
+};
+for (let i = 0; i < adventurer.inventory.length; i++) {
         console.log(adventurer.inventory[i]);
       }
+      adventurer.companion.companion2 = {
+        name: "Frank",
+        type: "Flea",
+        belongings: ["hat", "sunglasses"],
+      };
       console.log(adventurer);
+      adventurer.roll();
       
