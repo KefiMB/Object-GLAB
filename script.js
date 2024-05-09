@@ -57,6 +57,12 @@ for (let i = 0; i < adventurer.inventory.length; i++) {
           const rollResult = super.roll();
           console.log(`Scout roll: ${rollResult}`);
         }
-      
+        attack(enemy) {
+            const rollResult = super.roll();
+            console.log(`${this.name} attacks ${enemy.name} with a roll of ${rollResult}!`);
+          }
+          gainExperience(xp) {
+            this.experience += xp;
+          }
         
       }
